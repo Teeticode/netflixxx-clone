@@ -21,3 +21,40 @@
   height: 80px;
   max-width: 356px;
 }
+@media (max-width: 386px) {
+  .banner__description {
+    max-width: 300px;
+  }
+}
+@media (max-width: 300px) {
+  .banner__description {
+    max-width: 250px;
+  }
+}
+@media (max-width: 250px) {
+  .banner__description {
+    max-width: 200px;
+  }
+}
+@media (max-width: 200px) {
+  .banner__description {
+    max-width: 150px;
+  }
+}
+@media (max-width: 150px) {
+  .banner__description {
+    max-width: 100px;
+  }
+}
+@media (max-width: 100px) {
+  .banner__description {
+    max-width: 50px;
+  }
+}
+@media (max-width: 50px) {
+  .banner__description {
+    display: none;
+  }
+}
+
+
