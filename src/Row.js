@@ -33,18 +33,18 @@ export default function Row({ title, fetchUrl, isLargeRow }) {
 
   console.table(movies);
 
-  const handleClick=(movie)=>{
-    if(trailerUrl){
-      setTrailerUrl("");
-    }else{
-      movieTrailer(movie?.name || "")
-      .then(url=>{
-        const urlParams =new URLSearchParams(new URL(url).search);
-
-      }).catch(error=>console.log(error))
+  const handleClick = movie => {
+    if (trailerUrl) {
+      setTrailerUrl('');
+    } else {
+      movieTrailer(movie?.name || '')
+        .then(url => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get('v'));
+        })
+        .catch(error => console.log(error));
     }
-
-  }
+  };
 
   return (
     <div className="row">
@@ -52,7 +52,9 @@ export default function Row({ title, fetchUrl, isLargeRow }) {
       <div className="row__posters">
         {movies.map(movie => (
           <img
-            onClick={()=>{handleClick(movie)}}
+            onClick={() => {
+              handleClick(movie);
+            }}
             key={movie.id}
             className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
             src={`${baseurl}${
