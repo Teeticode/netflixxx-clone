@@ -5,10 +5,19 @@ import './Nav.css';
 export default function Nav() {
   const [show, handleShow] = useState(false);
 
-  useEffect(() => {});
+  useEffect(() => {
+    window.addEventListener("scroll",()=>{
+      if(window.scrollY){
+        handleShow(true)
+      }else handleShow(false)
+    });
+    return () =>{
+      window.removeEventListener("scroll")
+    }
+  });
 
   return (
-    <div className="nav">
+    <div className={}>
       <img
         src="https://res.cloudinary.com/teeti254/image/upload/v1623183127/712463_y4fxch.jpg"
         className="nav__icon"

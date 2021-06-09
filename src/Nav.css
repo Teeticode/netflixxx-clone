@@ -1,11 +1,12 @@
 .nav {
   position: fixed;
   display: flex;
-  top: 0;
+  top: 10px;
   justify-content: space-between;
   width: 100%;
   object-fit: contain;
   padding: 20px;
+  z-index: 1;
 }
 .nav__icon {
   position: fixed;
