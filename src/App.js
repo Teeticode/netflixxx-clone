@@ -5,12 +5,14 @@ import './style.css';
 import Row from './Row.js';
 import requests from './Requests.js';
 import Banner from './Banner.js';
+import Nav from './Nav.js';
+
 export default function App() {
   return (
-    <div>
-      {/* navbar */}
+    <div className="app">
+      <Nav />
       <Banner />
-      
+
       <Row title="Trending Now" isLargeRow fetchUrl={requests.fetchTrending} />
       <Row
         title="Netflix Originals"

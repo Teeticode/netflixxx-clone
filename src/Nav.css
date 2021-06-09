@@ -8,6 +8,8 @@
   object-fit: contain;
   padding: 20px;
   z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.9s;
 }
 .nav__icon {
   position: fixed;
