@@ -31,8 +31,6 @@ export default function Row({ title, fetchUrl, isLargeRow }) {
     }
   };
 
-  console.table(movies);
-
   const handleClick = movie => {
     if (trailerUrl) {
       setTrailerUrl('');
@@ -40,11 +38,14 @@ export default function Row({ title, fetchUrl, isLargeRow }) {
       movieTrailer(movie?.name || '')
         .then(url => {
           const urlParams = new URLSearchParams(new URL(url).search);
-          setTrailerUrl(urlParams.get('v'));
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+          console.log(error);
+        });
     }
   };
+
+  console.table(movies);
 
   return (
     <div className="row">
