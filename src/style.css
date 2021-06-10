@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Staatliches&display=swap');
 * {
   margin: 0;
 }
 .app {
   background-color: #111;
+  color: white;
+  font-family: 'Staatliches', cursive;
 }
